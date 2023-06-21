@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Page</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link href="./Assets/CSS/Style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- Heder Section for Web -->
+    <header class="shadow sticky-top bg-body-tertiary bg-white header-section">
+      <nav class="container-xl">
+        <div class="row justify-content-start pt-2 pb-1">
+          <div class="col-2">
+            <a href="./index.html"
+              ><h3 class="logo">Akstar<span class="logo-sub">.com</span></h3></a
+            >
+          </div>
+          <div class="col-5">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control search-box"
+                placeholder="Search..."
+                aria-label="Search..."
+                aria-describedby="button-addon2"
+              />
+              <button class="btn btn-search" type="button" id="button-addon2">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-5">
+            <div class="d-flex flex-row-reverse">
+              <div>
+                <a href="#" class="position-relative">
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-main"
+                  >
+                    99
+                  </span>
+                  <i class="bi bi-bag cart"></i>
+                </a>
+              </div>
+              <div class="pt-1 pb-1 ms-5 me-5">
+                <a class="position-relative" href="#">
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-main"
+                  >
+                    10
+                  </span>
+                  <i class="bi bi-heart cart"></i>
+                </a>
+              </div>
+              <div class="p-0">
+                <div
+                  class="cursor-pointer sign-dropdown"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-expanded="false"
+                >
+                  <p class="p-0 m-0 singin-small">Hello, Sing in</p>
+                  <p class="p-0 m-0 nav-account color-main fw-bold">
+                    Hello, Sing in
+                    <i class="bi bi-caret-down-fill main-light"></i>
+                  </p>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-box-arrow-in-right me-2"></i> Sign
+                        In</a
+                      >
+                    </li>
+                    <div class="divider dropdown-divider"></div>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-person-circle me-2"></i>My Account</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-heart me-2"></i>Wishlist</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-box-seam me-2"></i>Orders</a
+                      >
+                    </li>
+                    <div class="divider dropdown-divider"></div>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-power me-2"></i>Logout</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav class="bg-main p-0 mt-0">
+        <div class="d-flex flex-row container-xl">
+          <div
+            class="p-0 cursor-pointer"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions"
+            aria-controls="offcanvasWithBothOptions"
+          >
+            <p class="p-0 m-0 text-white link-style">
+              <i class="bi bi-list"></i> All
+            </p>
+          </div>
+          <div class="p-0 cursor-pointer ms-3">
+            <a href="./index.html"
+              ><p class="p-0 m-0 text-white link-style">Home</p></a
+            >
+          </div>
+
+          <div class="p-0 cursor-pointer ms-3">
+            <a href="./account_page.html"
+              ><p class="p-0 m-0 text-white link-style">My Account</p></a
+            >
+          </div>
+          <div class="p-0 cursor-pointer ms-3">
+            <a href="./wishlist_page.html"
+              ><p class="p-0 m-0 text-white link-style">Wishlist</p></a
+            >
+          </div>
+          <div class="p-0 cursor-pointer ms-3">
+            <a href="./cart_page.html"
+              ><p class="p-0 m-0 text-white link-style">My Cart</p></a
+            >
+          </div>
+          <div class="p-0 cursor-pointer ms-3">
+            <a href="./checkout_page.html"
+              ><p class="p-0 m-0 text-white link-style">Checkout</p></a
+            >
+          </div>
+          <div class="p-0 cursor-pointer ms-3">
+            <a href="./order_confirm_page.html"
+              ><p class="p-0 m-0 text-white link-style">Confirm Order</p></a
+            >
+          </div>
+          <div class="p-0 cursor-pointer ms-3">
+            <a href="./single_product.html">
+              <p class="p-0 m-0 text-white link-style">Product Details</p></a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Offcanvas component -->
+    <div
+      class="offcanvas offcanvas-start p-0"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-header bg-main-light">
+        <a
+          href="#"
+          class="side-nav-sign"
+          class="offcanvas-title"
+          id="offcanvasWithBothOptionsLabel"
+        >
+          <i class="bi bi-person-circle"></i>
+          Hello, Sign in
+        </a>
+        <i
+          class="bi bi-x-lg cursor-pointer"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></i>
+      </div>
+      <div class="offcanvas-body p-0">
+        <a class="side-nav-link"> Toys </a>
+        <a class="side-nav-link"> Mens </a>
+        <a class="side-nav-link"> Womens </a>
+        <a class="side-nav-link"> Boys </a>
+        <a class="side-nav-link"> Girls </a>
+        <a class="side-nav-link"> Gifts </a>
+        <a class="side-nav-link"> Bags </a>
+      </div>
+    </div>
+
+    <!-- Header Section for MObile -->
+    <header
+      class="shadow sticky-top bg-body-tertiary bg-main header-section-mobile"
+    >
+      <nav class="container-xl">
+        <div class="row justify-content-start pt-2 pb-1">
+          <div class="col-6">
+            <div class="d-flex">
+              <i
+                class="bi bi-list cart text-white cursor-pointer"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions"
+              ></i>
+              <h3 class="logo text-white mt-1 ms-1">
+                Akstar<span class="logo-sub">.com</span>
+              </h3>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="d-flex flex-row-reverse">
+              <div>
+                <a href="#" class="position-relative">
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-white text-dark"
+                  >
+                    99
+                  </span>
+                  <i class="bi bi-bag cart text-white"></i>
+                </a>
+              </div>
+              <div class="pt-0 pb-1 ms-5 me-3">
+                <a class="position-relative" href="#">
+                  <i class="bi bi-person-fill cart text-white"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav class="container-xl bg-white pt-1 pb-1">
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control search-box"
+            placeholder="Search..."
+            aria-label="Search..."
+            aria-describedby="button-addon2"
+          />
+          <button class="btn btn-search" type="button" id="button-addon2">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Breadcrumb Section -->
+    <div class="breadcrumb-style">
+      <nav aria-label="breadcrumb" class="container-xl mt-1">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#" class="text-secondary">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#" class="text-secondary">Products</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#" class="text-secondary">Product Name</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Check-Out</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- Add address Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Add a new address
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <label for="validationDefault09" class="form-label fw-bold"
+                >Country/Region</label
+              >
+              <select
+                class="form-select input-shadow"
+                id="validationDefault09"
+                required
+              >
+                <option selected disabled value="">Choose...</option>
+                <option>...</option>
+              </select>
+              <label for="validationDefault01" class="form-label fw-bold mt-3"
+                >Full name (First and Last name)</label
+              >
+              <input
+                type="text"
+                class="form-control input-shadow"
+                id="validationDefault01"
+                placeholder="Full name"
+                required
+              />
+              <label for="validationDefault02" class="form-label fw-bold mt-3"
+                >Mobile number</label
+              >
+              <input
+                type="text"
+                class="form-control input-shadow"
+                id="validationDefault02"
+                placeholder="Mobile number"
+                required
+              />
+              <label for="validationDefault03" class="form-label fw-bold mt-3"
+                >Pincode</label
+              >
+              <input
+                type="text"
+                class="form-control input-shadow"
+                id="validationDefault03"
+                placeholder="6 digits [0-9]Pin"
+                required
+              />
+              <label for="validationDefault04" class="form-label fw-bold mt-3"
+                >Flat, House no., Building, Company, Apartment</label
+              >
+              <input
+                type="text"
+                class="form-control input-shadow"
+                id="validationDefault04"
+                placeholder=""
+                required
+              />
+              <label for="validationDefault05" class="form-label fw-bold mt-3"
+                >Area, Street, Sector, Village</label
+              >
+              <input
+                type="text"
+                class="form-control input-shadow"
+                id="validationDefault05"
+                placeholder=""
+                required
+              />
+              <label for="validationDefault06" class="form-label fw-bold mt-3"
+                >Landmark</label
+              >
+              <input
+                type="text"
+                class="form-control input-shadow"
+                id="validationDefault06"
+                placeholder=""
+                required
+              />
+              <div class="row">
+                <div class="col-6">
+                  <label
+                    for="validationDefault07"
+                    class="form-label fw-bold mt-3"
+                    >Town/City</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control input-shadow"
+                    id="validationDefault07"
+                    placeholder=""
+                    required
+                  />
+                </div>
+                <div class="col-6">
+                  <label
+                    for="validationDefault08"
+                    class="form-label fw-bold mt-3"
+                    >State</label
+                  >
+                  <select
+                    class="form-select input-shadow"
+                    id="validationDefault08"
+                    required
+                  >
+                    <option selected disabled value="">Choose...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                class="btn buy-now d-block w-50 m-auto mt-3"
+              >
+                Add Address
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Address and Payment Select Section -->
+    <div class="container-xl">
+      <div class="row">
+        <!-- Address Section Section -->
+        <div class="col-md-8 p-3">
+          <div class="p-2 bg-white small-shadow rounded">
+            <h6 class="text-secondary fw-bold mb-2">Select Address</h6>
+            <div class="text-center mt-5 mb-5">
+              <p class="text-secondary justify-content-center">
+                You don't have add any address, So Please add a address
+              </p>
+              <a
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                class="buy-now text-center m-auto cursor-pointer"
+                >Add new address</a
+              >
+            </div>
+            <div class="p-3">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault1"
+                />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  <div class="border p-2 rounded address-box">
+                    <p>
+                      2/622, Thnagal,Ariyappadi, Arni, Thiruvannamali, Tamil
+                      Nadu, India - 632314. (9999999900) |
+                      <a href="#">Edite Address</a> |
+                      <a href="#">Delete Address</a>
+                    </p>
+                  </div>
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="flexRadioDefault2"
+                  checked
+                />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  <div class="border p-2 rounded address-box">
+                    <p>
+                      2/622, Thnagal,Ariyappadi, Arni, Thiruvannamali, Tamil
+                      Nadu, India - 632314. (9999999900) |
+                      <a href="#">Edite Address</a> |
+                      <a href="#">Delete Address</a>
+                    </p>
+                  </div>
+                </label>
+              </div>
+              <a
+                class="fw-bold text-secondary fs-6 cursor-pointer"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                ><i class="bi bi-plus fw-bold fs-5"></i> Add a new address</a
+              >
+            </div>
+            <!-- Select Payment Option -->
+            <h6 class="text-secondary fw-bold mb-2 mt-4">
+              Select Payment Method
+            </h6>
+            <div class="p-3">
+              <form>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault1"
+                  />
+                  <label class="form-check-label w-100" for="flexRadioDefault1">
+                    <div class="border p-2 rounded address-box">
+                      <p class="fw-bold">Pay with Debit/Credit/ATM Cards</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault2"
+                  />
+                  <label class="form-check-label w-100" for="flexRadioDefault2">
+                    <div class="border p-2 rounded address-box">
+                      <p class="fw-bold">Net Banking</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault3"
+                  />
+                  <label class="form-check-label w-100" for="flexRadioDefault3">
+                    <div class="border p-2 rounded address-box">
+                      <p class="fw-bold">Other UPI Apps</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="flexRadioDefault"
+                    id="flexRadioDefault4"
+                  />
+                  <label class="form-check-label w-100" for="flexRadioDefault4">
+                    <div class="border p-2 rounded address-box">
+                      <p class="fw-bold">Cash on Delivery/Pay on Delivery</p>
+                    </div>
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Price Section -->
+        <div class="col-md-4 p-3">
+          <div class="p-3 bg-white small-shadow rounded mb-3">
+            <h6 class="text-secondary fw-bold">Product List</h6>
+            <div class="row mt-2">
+              <div class="col-4">
+                <img
+                  src="./Assets/Images/boy.png"
+                  alt="mouse corsair"
+                  class="similer-product-img"
+                />
+              </div>
+              <div class="col-8">
+                <h6 class="text-secondary">
+                  Lorem ipsum dolor sit amet consectetur
+                </h6>
+                <h6 class="fw-bold">$20</h6>
+              </div>
+            </div>
+          </div>
+          <div class="p-3 bg-white small-shadow rounded">
+            <h6 class="text-secondary fw-bold mb-2">Order Summary</h6>
+            <div class="row">
+              <div class="col-6">
+                <p class="text-secondary">Total price:</p>
+              </div>
+              <div class="col-6">
+                <p class="text-secondary float-end">$20</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <p class="text-secondary">Discount:</p>
+              </div>
+              <div class="col-6">
+                <p class="text-success float-end">-$20</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <p class="text-secondary">TAX:</p>
+              </div>
+              <div class="col-6">
+                <p class="text-secondary float-end">$20</p>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-6">
+                <p class="text-secondary">Total price:</p>
+              </div>
+              <div class="col-6">
+                <p class="text-secondary fw-bold float-end">$20</p>
+              </div>
+            </div>
+            <a href="#" class="buy-now d-block text-center">Place Order</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommended Products -->
+    <div class="bg-white mt-3 mb-3">
+      <div class="container-xl pt-3 pb-3">
+        <h5 class="text-secondary fw-bold">Recommended Products</h5>
+        <div>
+          <div class="swiper">
+            <div class="slide-container swiper3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="main-product-card">
+                      <img
+                        src="./Assets/Images/teddy.png"
+                        alt="mouse corsair"
+                        class="cart-product-img"
+                      />
+
+                      <div class="Content-section position-relative">
+                        <div class="d-flex heart-cart">
+                          <a href="#"><i class="bi bi-heart icon-style"></i></a>
+                        </div>
+                        <a href="#" class="text-uppercase fw-bold text-dark">
+                          Product Name
+                        </a>
+                        <p class="m-0 p-0 text-secondary product-des">
+                          Lorem ipsum dolor sit amet.
+                        </p>
+                        <p class="p-0 m-0 fw-bold">
+                          Rs.50
+                          <span
+                            class="text-secondary fw-normal text-decoration-line-through product-des"
+                            >Rs.100</span
+                          ><span class="fw-normal main-light product-des">
+                            (50% OFF)</span
+                          >
+                        </p>
+                        <div class="d-felx">
+                          <i class="bi bi-star-fill main-light"></i>
+                          <i class="bi bi-star-fill main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                        </div>
+                        <a
+                          href="#"
+                          class="wishlist-add d-block text-center ms-0 p-1"
+                          >Add to cart</a
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="main-product-card">
+                      <img
+                        src="./Assets/Images/teddy.png"
+                        alt="mouse corsair"
+                        class="cart-product-img"
+                      />
+
+                      <div class="Content-section position-relative">
+                        <div class="d-flex heart-cart">
+                          <a href="#"><i class="bi bi-heart icon-style"></i></a>
+                        </div>
+                        <a href="#" class="text-uppercase fw-bold text-dark">
+                          Product Name
+                        </a>
+                        <p class="m-0 p-0 text-secondary product-des">
+                          Lorem ipsum dolor sit amet.
+                        </p>
+                        <p class="p-0 m-0 fw-bold">
+                          Rs.50
+                          <span
+                            class="text-secondary fw-normal text-decoration-line-through product-des"
+                            >Rs.100</span
+                          ><span class="fw-normal main-light product-des">
+                            (50% OFF)</span
+                          >
+                        </p>
+                        <div class="d-felx">
+                          <i class="bi bi-star-fill main-light"></i>
+                          <i class="bi bi-star-fill main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                        </div>
+                        <a
+                          href="#"
+                          class="wishlist-add d-block text-center ms-0 p-1"
+                          >Add to cart</a
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="main-product-card">
+                      <img
+                        src="./Assets/Images/teddy.png"
+                        alt="mouse corsair"
+                        class="cart-product-img"
+                      />
+
+                      <div class="Content-section position-relative">
+                        <div class="d-flex heart-cart">
+                          <a href="#"><i class="bi bi-heart icon-style"></i></a>
+                        </div>
+                        <a href="#" class="text-uppercase fw-bold text-dark">
+                          Product Name
+                        </a>
+                        <p class="m-0 p-0 text-secondary product-des">
+                          Lorem ipsum dolor sit amet.
+                        </p>
+                        <p class="p-0 m-0 fw-bold">
+                          Rs.50
+                          <span
+                            class="text-secondary fw-normal text-decoration-line-through product-des"
+                            >Rs.100</span
+                          ><span class="fw-normal main-light product-des">
+                            (50% OFF)</span
+                          >
+                        </p>
+                        <div class="d-felx">
+                          <i class="bi bi-star-fill main-light"></i>
+                          <i class="bi bi-star-fill main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                        </div>
+                        <a
+                          href="#"
+                          class="wishlist-add d-block text-center ms-0 p-1"
+                          >Add to cart</a
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="main-product-card">
+                      <img
+                        src="./Assets/Images/teddy.png"
+                        alt="mouse corsair"
+                        class="cart-product-img"
+                      />
+
+                      <div class="Content-section position-relative">
+                        <div class="d-flex heart-cart">
+                          <a href="#"><i class="bi bi-heart icon-style"></i></a>
+                        </div>
+                        <a href="#" class="text-uppercase fw-bold text-dark">
+                          Product Name
+                        </a>
+                        <p class="m-0 p-0 text-secondary product-des">
+                          Lorem ipsum dolor sit amet.
+                        </p>
+                        <p class="p-0 m-0 fw-bold">
+                          Rs.50
+                          <span
+                            class="text-secondary fw-normal text-decoration-line-through product-des"
+                            >Rs.100</span
+                          ><span class="fw-normal main-light product-des">
+                            (50% OFF)</span
+                          >
+                        </p>
+                        <div class="d-felx">
+                          <i class="bi bi-star-fill main-light"></i>
+                          <i class="bi bi-star-fill main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                        </div>
+                        <a
+                          href="#"
+                          class="wishlist-add d-block text-center ms-0 p-1"
+                          >Add to cart</a
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="main-product-card">
+                      <img
+                        src="./Assets/Images/teddy.png"
+                        alt="mouse corsair"
+                        class="cart-product-img"
+                      />
+
+                      <div class="Content-section position-relative">
+                        <div class="d-flex heart-cart">
+                          <a href="#"><i class="bi bi-heart icon-style"></i></a>
+                        </div>
+                        <a href="#" class="text-uppercase fw-bold text-dark">
+                          Product Name
+                        </a>
+                        <p class="m-0 p-0 text-secondary product-des">
+                          Lorem ipsum dolor sit amet.
+                        </p>
+                        <p class="p-0 m-0 fw-bold">
+                          Rs.50
+                          <span
+                            class="text-secondary fw-normal text-decoration-line-through product-des"
+                            >Rs.100</span
+                          ><span class="fw-normal main-light product-des">
+                            (50% OFF)</span
+                          >
+                        </p>
+                        <div class="d-felx">
+                          <i class="bi bi-star-fill main-light"></i>
+                          <i class="bi bi-star-fill main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                        </div>
+                        <a
+                          href="#"
+                          class="wishlist-add d-block text-center ms-0 p-1"
+                          >Add to cart</a
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="main-product-card">
+                      <img
+                        src="./Assets/Images/teddy.png"
+                        alt="mouse corsair"
+                        class="cart-product-img"
+                      />
+
+                      <div class="Content-section position-relative">
+                        <div class="d-flex heart-cart">
+                          <a href="#"><i class="bi bi-heart icon-style"></i></a>
+                        </div>
+                        <a href="#" class="text-uppercase fw-bold text-dark">
+                          Product Name
+                        </a>
+                        <p class="m-0 p-0 text-secondary product-des">
+                          Lorem ipsum dolor sit amet.
+                        </p>
+                        <p class="p-0 m-0 fw-bold">
+                          Rs.50
+                          <span
+                            class="text-secondary fw-normal text-decoration-line-through product-des"
+                            >Rs.100</span
+                          ><span class="fw-normal main-light product-des">
+                            (50% OFF)</span
+                          >
+                        </p>
+                        <div class="d-felx">
+                          <i class="bi bi-star-fill main-light"></i>
+                          <i class="bi bi-star-fill main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                        </div>
+                        <a
+                          href="#"
+                          class="wishlist-add d-block text-center ms-0 p-1"
+                          >Add to cart</a
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#">
+                    <div class="main-product-card">
+                      <img
+                        src="./Assets/Images/teddy.png"
+                        alt="mouse corsair"
+                        class="cart-product-img"
+                      />
+
+                      <div class="Content-section position-relative">
+                        <div class="d-flex heart-cart">
+                          <a href="#"><i class="bi bi-heart icon-style"></i></a>
+                        </div>
+                        <a href="#" class="text-uppercase fw-bold text-dark">
+                          Product Name
+                        </a>
+                        <p class="m-0 p-0 text-secondary product-des">
+                          Lorem ipsum dolor sit amet.
+                        </p>
+                        <p class="p-0 m-0 fw-bold">
+                          Rs.50
+                          <span
+                            class="text-secondary fw-normal text-decoration-line-through product-des"
+                            >Rs.100</span
+                          ><span class="fw-normal main-light product-des">
+                            (50% OFF)</span
+                          >
+                        </p>
+                        <div class="d-felx">
+                          <i class="bi bi-star-fill main-light"></i>
+                          <i class="bi bi-star-fill main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                          <i class="bi bi-star main-light"></i>
+                        </div>
+                        <a
+                          href="#"
+                          class="wishlist-add d-block text-center ms-0 p-1"
+                          >Add to cart</a
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="swiper-button-next swiper-navBtn"></div>
+              <div class="swiper-button-prev swiper-navBtn"></div>
+              <div class="swiper-pagination swiper-pagination-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer section -->
+    <footer class="bg-very-light">
+      <div class="container py-5">
+        <div class="row py-3">
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <h6 class="text-uppercase font-weight-bold mb-4">About</h6>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2">
+                <a href="#" class="text-muted">Contact Us</a>
+              </li>
+              <li class="mb-2"><a href="#" class="text-muted">About Us</a></li>
+              <li class="mb-2"><a href="#" class="text-muted">Stories</a></li>
+              <li class="mb-2"><a href="#" class="text-muted">Press</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <h6 class="text-uppercase font-weight-bold mb-4">Help</h6>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><a href="#" class="text-muted">Payments</a></li>
+              <li class="mb-2"><a href="#" class="text-muted">Shipping</a></li>
+              <li class="mb-2">
+                <a href="#" class="text-muted">Cancellation</a>
+              </li>
+              <li class="mb-2"><a href="#" class="text-muted">Returns</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <h6 class="text-uppercase font-weight-bold mb-4">Policy</h6>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2">
+                <a href="#" class="text-muted">Return Policy</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted">Terms Of Use</a>
+              </li>
+              <li class="mb-2"><a href="#" class="text-muted">Security</a></li>
+              <li class="mb-2"><a href="#" class="text-muted">Privacy</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <h6 class="text-uppercase font-weight-bold mb-4">Company</h6>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><a href="#" class="text-muted">Login</a></li>
+              <li class="mb-2"><a href="#" class="text-muted">Register</a></li>
+              <li class="mb-2"><a href="#" class="text-muted">Sitemap</a></li>
+              <li class="mb-2">
+                <a href="#" class="text-muted">Our Products</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-lg-0">
+            <h6 class="text-uppercase font-weight-bold mb-4">
+              Registered Office Address
+            </h6>
+            <p class="text-muted mb-4">
+              Here , write the complete address of the Registered office address
+              along with telephone number.
+            </p>
+            <ul class="list-inline mt-4">
+              <li class="list-inline-item">
+                <a href="#" target="_blank" title="twitter"
+                  ><i class="bi bi-twitter main-light"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" title="facebook"
+                  ><i class="bi bi-facebook main-light"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" title="instagram"
+                  ><i class="bi bi-instagram main-light"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" title="pinterest"
+                  ><i class="bi bi-youtube main-light"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" title="vimeo"
+                  ><i class="bi bi-google main-light"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="p-0 m-0 b-0" />
+
+      <div class="bg-body-color py-2">
+        <div class="container text-center">
+          <p class="text-muted mb-0 py-2">
+            &copy; 2023 Akstar.com All risghts reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./Assets/JS/Script.js"></script>
+  </body>
+</html>

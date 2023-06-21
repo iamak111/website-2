@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 Page</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link href="./Assets/CSS/Style.css" rel="stylesheet" />
+  </head>
+  <body class="bg-white">
+    <!-- Heder Section for Web -->
+    <header class="shadow sticky-top bg-body-tertiary bg-white header-section">
+      <nav class="container-xl">
+        <div class="row justify-content-start pt-2 pb-1">
+          <div class="col-2">
+            <a href="./index.html"
+              ><h3 class="logo">Akstar<span class="logo-sub">.com</span></h3></a
+            >
+          </div>
+          <div class="col-5">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control search-box"
+                placeholder="Search..."
+                aria-label="Search..."
+                aria-describedby="button-addon2"
+              />
+              <button class="btn btn-search" type="button" id="button-addon2">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-5">
+            <div class="d-flex flex-row-reverse">
+              <div>
+                <a href="#" class="position-relative">
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-main"
+                  >
+                    99
+                  </span>
+                  <i class="bi bi-bag cart"></i>
+                </a>
+              </div>
+              <div class="pt-1 pb-1 ms-5 me-5">
+                <a class="position-relative" href="#">
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-main"
+                  >
+                    10
+                  </span>
+                  <i class="bi bi-heart cart"></i>
+                </a>
+              </div>
+              <div class="p-0">
+                <div
+                  class="cursor-pointer sign-dropdown"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-expanded="false"
+                >
+                  <p class="p-0 m-0 singin-small">Hello, Sing in</p>
+                  <p class="p-0 m-0 nav-account color-main fw-bold">
+                    Hello, Sing in
+                    <i class="bi bi-caret-down-fill main-light"></i>
+                  </p>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-box-arrow-in-right me-2"></i> Sign
+                        In</a
+                      >
+                    </li>
+                    <div class="divider dropdown-divider"></div>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-person-circle me-2"></i>My Account</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-heart me-2"></i>Wishlist</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-box-seam me-2"></i>Orders</a
+                      >
+                    </li>
+                    <div class="divider dropdown-divider"></div>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-power me-2"></i>Logout</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav class="bg-main p-0 mt-0">
+        <div class="d-flex flex-row container-xl">
+          <div
+            class="p-0 cursor-pointer"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions"
+            aria-controls="offcanvasWithBothOptions"
+          >
+            <p class="p-0 m-0 text-white link-style">
+              <i class="bi bi-list"></i> All
+            </p>
+          </div>
+          <div class="p-0 cursor-pointer ms-3">
+            <a href="./index.html"
+              ><p class="p-0 m-0 text-white link-style">Home</p></a
+            >
+          </div>
+
+          <div class="p-0 cursor-pointer ms-3">
+            <a href="./account_page.html"
+              ><p class="p-0 m-0 text-white link-style">My Account</p></a
+            >
+          </div>
+          <div class="p-0 cursor-pointer ms-3">
+            <a href="./wishlist_page.html"
+              ><p class="p-0 m-0 text-white link-style">Wishlist</p></a
+            >
+          </div>
+          <div class="p-0 cursor-pointer ms-3">
+            <a href="./cart_page.html"
+              ><p class="p-0 m-0 text-white link-style">My Cart</p></a
+            >
+          </div>
+          <div class="p-0 cursor-pointer ms-3">
+            <a href="./checkout_page.html"
+              ><p class="p-0 m-0 text-white link-style">Checkout</p></a
+            >
+          </div>
+          <div class="p-0 cursor-pointer ms-3">
+            <a href="./order_confirm_page.html"
+              ><p class="p-0 m-0 text-white link-style">Confirm Order</p></a
+            >
+          </div>
+          <div class="p-0 cursor-pointer ms-3">
+            <a href="./single_product.html">
+              <p class="p-0 m-0 text-white link-style">Product Details</p></a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Offcanvas component -->
+    <div
+      class="offcanvas offcanvas-start p-0"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-header bg-main-light">
+        <a
+          href="#"
+          class="side-nav-sign"
+          class="offcanvas-title"
+          id="offcanvasWithBothOptionsLabel"
+        >
+          <i class="bi bi-person-circle"></i>
+          Hello, Sign in
+        </a>
+        <i
+          class="bi bi-x-lg cursor-pointer"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></i>
+      </div>
+      <div class="offcanvas-body p-0">
+        <a class="side-nav-link"> Toys </a>
+        <a class="side-nav-link"> Mens </a>
+        <a class="side-nav-link"> Womens </a>
+        <a class="side-nav-link"> Boys </a>
+        <a class="side-nav-link"> Girls </a>
+        <a class="side-nav-link"> Gifts </a>
+        <a class="side-nav-link"> Bags </a>
+      </div>
+    </div>
+
+    <!-- Header Section for MObile -->
+    <header
+      class="shadow sticky-top bg-body-tertiary bg-main header-section-mobile"
+    >
+      <nav class="container-xl">
+        <div class="row justify-content-start pt-2 pb-1">
+          <div class="col-6">
+            <div class="d-flex">
+              <i
+                class="bi bi-list cart text-white cursor-pointer"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions"
+              ></i>
+              <h3 class="logo text-white mt-1 ms-1">
+                Akstar<span class="logo-sub">.com</span>
+              </h3>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="d-flex flex-row-reverse">
+              <div>
+                <a href="#" class="position-relative">
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-white text-dark"
+                  >
+                    99
+                  </span>
+                  <i class="bi bi-bag cart text-white"></i>
+                </a>
+              </div>
+              <div class="pt-0 pb-1 ms-5 me-3">
+                <a class="position-relative" href="#">
+                  <i class="bi bi-person-fill cart text-white"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav class="container-xl bg-white pt-1 pb-1">
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control search-box"
+            placeholder="Search..."
+            aria-label="Search..."
+            aria-describedby="button-addon2"
+          />
+          <button class="btn btn-search" type="button" id="button-addon2">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 404 Error Image Section -->
+    <div class="m-auto">
+      <div class="w-50 m-auto mt-4 mb-4 width-100">
+        <div class="text-center">
+          <img
+            src="./Assets/Images/404.jpg"
+            alt="mouse corsair"
+            class="w-50 m-auto text-center"
+          />
+        </div>
+        <div class="p-5 justify-content-center text-center">
+          <div class="mb-3 mt-3">
+            <a href="#" class="buy-now">Move to home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer section -->
+    <footer class="bg-very-light">
+      <div class="container py-5">
+        <div class="row py-3">
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <h6 class="text-uppercase font-weight-bold mb-4">About</h6>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2">
+                <a href="#" class="text-muted">Contact Us</a>
+              </li>
+              <li class="mb-2"><a href="#" class="text-muted">About Us</a></li>
+              <li class="mb-2"><a href="#" class="text-muted">Stories</a></li>
+              <li class="mb-2"><a href="#" class="text-muted">Press</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <h6 class="text-uppercase font-weight-bold mb-4">Help</h6>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><a href="#" class="text-muted">Payments</a></li>
+              <li class="mb-2"><a href="#" class="text-muted">Shipping</a></li>
+              <li class="mb-2">
+                <a href="#" class="text-muted">Cancellation</a>
+              </li>
+              <li class="mb-2"><a href="#" class="text-muted">Returns</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <h6 class="text-uppercase font-weight-bold mb-4">Policy</h6>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2">
+                <a href="#" class="text-muted">Return Policy</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted">Terms Of Use</a>
+              </li>
+              <li class="mb-2"><a href="#" class="text-muted">Security</a></li>
+              <li class="mb-2"><a href="#" class="text-muted">Privacy</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+            <h6 class="text-uppercase font-weight-bold mb-4">Company</h6>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><a href="#" class="text-muted">Login</a></li>
+              <li class="mb-2"><a href="#" class="text-muted">Register</a></li>
+              <li class="mb-2"><a href="#" class="text-muted">Sitemap</a></li>
+              <li class="mb-2">
+                <a href="#" class="text-muted">Our Products</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-lg-0">
+            <h6 class="text-uppercase font-weight-bold mb-4">
+              Registered Office Address
+            </h6>
+            <p class="text-muted mb-4">
+              Here , write the complete address of the Registered office address
+              along with telephone number.
+            </p>
+            <ul class="list-inline mt-4">
+              <li class="list-inline-item">
+                <a href="#" target="_blank" title="twitter"
+                  ><i class="bi bi-twitter main-light"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" title="facebook"
+                  ><i class="bi bi-facebook main-light"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" title="instagram"
+                  ><i class="bi bi-instagram main-light"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" title="pinterest"
+                  ><i class="bi bi-youtube main-light"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" target="_blank" title="vimeo"
+                  ><i class="bi bi-google main-light"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="p-0 m-0 b-0" />
+
+      <div class="bg-body-color py-2">
+        <div class="container text-center">
+          <p class="text-muted mb-0 py-2">
+            &copy; 2023 Akstar.com All risghts reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="./Assets/JS/Script.js"></script>
+  </body>
+</html>
